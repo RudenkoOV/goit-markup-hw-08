@@ -1,0 +1,38 @@
+.soc-network {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    
+    &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.12;
+    text-transform: uppercase;
+    color: $footer-logo;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+
+    &__list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+    &__svg {
+    fill: currentColor;
+}
+
+    &__footer {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $button-text;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+            background-color: $web-color;
+    }
+    }
+}

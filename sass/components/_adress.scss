@@ -1,0 +1,35 @@
+.adress {
+    font-style: normal;
+    text-decoration: none;
+    margin-top: 20px;
+    text-align: center;
+     
+    > ul > li {
+            margin-bottom: 8px;
+        }
+    > ul>li:last-child {
+            margin-bottom: 0;
+        }
+}
+
+.adress__map {
+    display: block;
+    line-height: 1.71;
+    min-width: 231px;
+    color: $footer-link-map;
+    text-decoration: none;
+}
+
+.adress__link {
+    display: block;
+    line-height: 1.71;
+    color: $footer-link-item;
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:last-child {
+            margin-bottom: 0px;
+        }
+    &:hover, &:focus {
+            color: $header-hover-color;
+        }
+}

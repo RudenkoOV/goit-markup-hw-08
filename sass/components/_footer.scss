@@ -1,0 +1,17 @@
+.foot {
+    background: $footer-background;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer {
+    // display: flex;
+    // align-items: baseline;
+    // justify-content: space-between;
+    > a {
+    display: block;
+    }
+    .logo {
+        text-align: center;
+    }
+}
