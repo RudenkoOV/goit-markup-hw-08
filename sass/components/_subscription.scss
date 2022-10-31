@@ -1,4 +1,9 @@
 
+.subscription {
+    @media screen and (max-width:1199px) and (min-width: 768px) {
+        margin-top: 60px;
+    }
+}
 .subscription__title {
     font-weight: 700;
     font-size: 14px;
@@ -6,16 +11,24 @@
     text-transform: uppercase;
     color: $footer-logo;
     margin-bottom: 20px;
+    @media screen and (max-width:1199px) {
     text-align: center;
+    }
 }
-// .subscription__form {
-//     // display: flex;
-// }
+
+.subscription__form {
+    @media screen and (min-width:1200px) {
+    display: flex;
+    gap: 12px;
+}
+}
 
 .subscription__label {
     min-width: 450px;
+    @media screen and (min-width:1200px) {
+        min-width: 358px;
 }
-
+}
 .subscription__input {
     width: 100%;
     height: 50px;
@@ -51,7 +64,6 @@
     width: 200px;
     height: 50px;
     border: none;
-    // margin-left: 12px;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -61,4 +73,6 @@
             background-color: $btn-portfolio-background;
             color:$btn-portfolio-txt;
         }
+    @media screen and (min-width:1200px) {
+        margin-top: 0;}
 }

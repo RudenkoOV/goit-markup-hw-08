@@ -73,6 +73,49 @@ ul {
 .footer .logo {
   text-align: center;
 }
+@media screen and (min-width: 1200px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer .adress {
+    width: 50%;
+  }
+  .footer .soc-network {
+    width: 50%;
+  }
+  .footer .subscription {
+    width: 100%;
+  }
+  .footer .subscription__input {
+    width: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .portfolio {
   background-color: #ffffff;
@@ -98,6 +141,12 @@ ul {
 }
 .modal .subscription__btn {
   margin-top: 0;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal__close-btn {
@@ -400,11 +449,18 @@ ul {
 .adress {
   font-style: normal;
   text-decoration: none;
-  margin-top: 20px;
   text-align: center;
+}
+.adress > ul {
+  margin-top: 20px;
 }
 .adress > ul > li {
   margin-bottom: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .adress > ul > li {
+    margin-bottom: 9px;
+  }
 }
 .adress > ul > li:last-child {
   margin-bottom: 0;
@@ -416,6 +472,11 @@ ul {
   min-width: 231px;
   color: #ffffff;
   text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .adress__map {
+    text-align: left;
+  }
 }
 
 .adress__link {
@@ -432,10 +493,16 @@ ul {
 .adress__link:hover, .adress__link:focus {
   color: #2196f3;
 }
+@media screen and (min-width: 1200px) {
+  .adress__link {
+    text-align: left;
+  }
+}
 
 .soc-network {
   margin-top: 60px;
   margin-bottom: 60px;
+  margin-left: 0;
 }
 .soc-network__text {
   font-weight: 700;
@@ -445,6 +512,11 @@ ul {
   color: #ffffff;
   margin-bottom: 20px;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .soc-network__text {
+    text-align: left;
+  }
 }
 .soc-network__list {
   display: -webkit-box;
@@ -480,6 +552,12 @@ ul {
   background-color: #2196f3;
 }
 
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .subscription {
+    margin-top: 60px;
+  }
+}
+
 .subscription__title {
   font-weight: 700;
   font-size: 14px;
@@ -487,11 +565,29 @@ ul {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
-  text-align: center;
+}
+@media screen and (max-width: 1199px) {
+  .subscription__title {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 12px;
+  }
 }
 
 .subscription__label {
   min-width: 450px;
+}
+@media screen and (min-width: 1200px) {
+  .subscription__label {
+    min-width: 358px;
+  }
 }
 
 .subscription__input {
@@ -544,6 +640,11 @@ ul {
 .subscription__btn:hover, .subscription__btn:focus {
   background-color: #f5f4fa;
   color: #212121;
+}
+@media screen and (min-width: 1200px) {
+  .subscription__btn {
+    margin-top: 0;
+  }
 }
 
 .is-hidden {
@@ -845,13 +946,11 @@ ul {
 }
 
 .products {
-  display: none;
+  margin-bottom: 94px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .products {
-    display: contents;
-    padding-bottom: 94px;
-    padding-top: 94px;
+    display: none;
   }
 }
 
@@ -925,9 +1024,31 @@ ul {
   color: #212121;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+}
 
 .team__list {
   background-color: #f5f4fa;
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .team__item {
@@ -940,6 +1061,18 @@ ul {
 }
 .team__item:last-child {
   margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .team__item {
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: calc((100% - 90px) / 4);
+    margin-bottom: 0;
+  }
 }
 
 .team__name {
@@ -963,20 +1096,32 @@ ul {
   padding-bottom: 60px;
   padding-top: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .client {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+}
 
 .client__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 30px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .client__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .client__link {
@@ -1001,6 +1146,11 @@ ul {
 .client__link:hover, .client__link:focus {
   border-color: #2196f3;
   color: #2196f3;
+}
+@media screen and (min-width: 1200px) {
+  .client__link {
+    width: 170px;
+  }
 }
 
 .client__svg {

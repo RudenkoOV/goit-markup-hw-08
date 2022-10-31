@@ -1,6 +1,7 @@
 .soc-network {
     margin-top: 60px;
     margin-bottom: 60px;
+    margin-left: 0;
     
     &__text {
     font-weight: 700;
@@ -10,6 +11,9 @@
     color: $footer-logo;
     margin-bottom: 20px;
     text-align: center;
+    @media screen and (min-width:1200px) {
+            text-align: left;
+            }
     }
 
     &__list {

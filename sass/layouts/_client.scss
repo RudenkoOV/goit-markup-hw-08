@@ -1,14 +1,21 @@
 .client {
 padding-bottom: 60px;
 padding-top: 60px;
+@media screen and (min-width:1200px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+    }
 }
 
 .client__list {
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width:1200px) {
+    flex-wrap: nowrap;
+    }
 }
 
 .client__link {
@@ -27,6 +34,9 @@ padding-top: 60px;
             border-color: $button-background;
             color: $button-background;
         }
+    @media screen and (min-width:1200px) {
+        width: 170px;
+    }
 }
 .client__svg {
     fill: currentColor;
