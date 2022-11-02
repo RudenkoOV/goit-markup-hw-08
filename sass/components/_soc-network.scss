@@ -1,8 +1,9 @@
 .soc-network {
+    @media screen and (max-width:767px) {
     margin-top: 60px;
     margin-bottom: 60px;
     margin-left: 0;
-    
+    }
     &__text {
     font-weight: 700;
     font-size: 14px;

@@ -2,6 +2,9 @@
     font-style: normal;
     text-decoration: none;
     text-align: center;
+    @media screen and (min-width:1200px) {
+        text-align: left;
+    }
     >ul {
         margin-top: 20px;
     }
