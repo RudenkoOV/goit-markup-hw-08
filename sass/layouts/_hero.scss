@@ -2,7 +2,7 @@
     background-color: $hero-title-background;
     background-image: linear-gradient($gradient-hero, $gradient-hero),
         url('../images/img-main.jpg');
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;

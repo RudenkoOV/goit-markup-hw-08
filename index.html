@@ -19,7 +19,13 @@
     <header class="header">
         <div class="container">
             <a class="logo logo--black" href="./index.html"><span class="logo__web">Web</span>Studio</a>
-            <div class="vh">
+            <button class="mobile-menu__btn is-open" type="button" data-menu-button aria-expanded="false">
+                <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+                    <use class="mobile-menu__icon-menu" href="./images/icons.svg#icon-menu-open"></use>
+                    <use class="mobile-menu__icon-cross" href="./images/icons.svg#icon-menu-close"></use>
+                </svg>
+            </button>
+            <div class="mobile-menu">
                 <nav class="navigation">
                     <ul class="navigation__list">
                         <li><a class="navigation__link navigation__link--curent" href="">Студія</a></li>
@@ -415,6 +421,7 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
