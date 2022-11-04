@@ -1,12 +1,32 @@
 .hero {
     background-color: $hero-title-background;
     background-image: linear-gradient($gradient-hero, $gradient-hero),
-        url('../images/img-main.jpg');
+        url('../images/img-main-480.jpg');
+    @include retina {
+        background-image: linear-gradient($gradient-hero, $gradient-hero),
+                url('../../images/img-main-480@2x.jpg');
+            }
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;
     max-width: 480px;
+        @media screen and (min-width:768px) {
+            background-image: linear-gradient($gradient-hero, $gradient-hero),
+                    url('../images/img-main-768.jpg');
+            @include retina {
+                    background-image: linear-gradient($gradient-hero, $gradient-hero),
+                        url('../../images/Img-main-768@2x.jpg');
+                }
+        }
+        @media screen and (min-width:1200px) {
+            background-image: linear-gradient($gradient-hero, $gradient-hero),
+                        url('../images/img-main.jpg');
+            @include retina {
+                        background-image: linear-gradient($gradient-hero, $gradient-hero),
+                            url('../../images/img-main@2x.jpg');
+                    }
+        }
     .container {
     padding-bottom: 118px;
     padding-top: 118px;

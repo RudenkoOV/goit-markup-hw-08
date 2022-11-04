@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +19,12 @@
     <header class="header">
         <div class="container">
             <a class="logo logo--black" href="./index.html"><span class="logo__web">Web</span>Studio</a>
-            <button class="mobile-menu__btn is-open" type="button" data-menu-button aria-expanded="false">
+            <!-- <button class="mobile-menu__btn is-open" type="button" data-menu-button aria-expanded="false">
                 <svg width="40" height="40" aria-label="Перемикач мобільного меню">
                     <use class="mobile-menu__icon-menu" href="./images/icons.svg#icon-menu-open"></use>
                     <use class="mobile-menu__icon-cross" href="./images/icons.svg#icon-menu-close"></use>
                 </svg>
-            </button>
+            </button> -->
             <div class="mobile-menu">
                 <nav class="navigation">
                     <ul class="navigation__list">
@@ -129,7 +129,15 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__item">
-                        <img src="./images/img21.jpg" alt="Ігор Д" width="270">
+                        <picture>
+                            <source srcset="./images/img21.jpg 1x,
+                             ./images/img21@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./images/img21-768.jpg 1x,
+                            ./images/img21-768@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./images/img21-480.jpg 1x,
+                            ./images/img21-480@2x.jpg 2x" />
+                            <img src="./images/img21-480.jpg" alt="Ігор Д" />
+                        </picture>
                         <h3 class="team__name">Ігор Дем'яненко</h3>
                         <p class="team__position">Product Designer</p>
                         <ul class="cosial-networks">
@@ -162,7 +170,15 @@
                         </ul>
                     </li>
                     <li class="team__item">
-                        <img src="./images/img22.jpg" alt="Ольга Р" width="270">
+                        <picture>
+                            <source srcset="./images/img22.jpg 1x,
+                                                     ./images/img22@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./images/img22-768.jpg 1x,
+                                                    ./images/img22-768@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./images/img22-480.jpg 1x,
+                                                    ./images/img22-480@2x.jpg 2x" />
+                            <img src="./images/img22.jpg" alt="Ольга Р">
+                        </picture>
                         <h3 class="team__name">Ольга Рєпіна</h3>
                         <p class="team__position">Frontend Developer</p>
                         <ul class="cosial-networks">
@@ -198,7 +214,16 @@
                         </ul>
                     </li>
                     <li class="team__item">
-                        <img src="./images/img23.jpg" alt="Микола Т" width="270">
+                        <picture>
+                            <source srcset="./images/img23.jpg 1x,
+                                                     ./images/img23@2x.jpg 2x" media="(min-width: 1200px)"
+                                sizes="320px" />
+                            <source srcset="./images/img23-768.jpg 1x,
+                                                    ./images/img23-768@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./images/img23-480.jpg 1x,
+                                                    ./images/img23-480@2x.jpg 2x" />
+                            <img src="./images/img23.jpg" alt="Микола Т">
+                        </picture>
                         <h3 class="team__name">Микола Тарасов</h3>
                         <p class="team__position">Marketing</p>
                         <ul class="cosial-networks">
@@ -233,7 +258,15 @@
                         </ul>
                     </li>
                     <li class="team__item">
-                        <img src="./images/img24.jpg" alt="Михайло Є" width="270">
+                        <picture>
+                            <source srcset="./images/img24.jpg 1x,
+                                                     ./images/img24@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./images/img24-768.jpg 1x,
+                                                    ./images/img24-768@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./images/img24-480.jpg 1x,
+                                                    ./images/img24-480@2x.jpg 2x" />
+                            <img src="./images/img24.jpg" alt="Михайло Є">
+                        </picture>
                         <h3 class="team__name">Михайло Єрмаков</h3>
                         <p class="team__position">UI Designer</p>
                         <ul class="cosial-networks">
