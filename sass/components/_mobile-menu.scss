@@ -17,8 +17,18 @@
         overflow: hidden;
         z-index: 20;
         transform: translateX(100%);
+        transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1),
+        transform 700ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            
+                .subscription__btn {
+                    margin-top: 0;
+                }
         &.is-open {
             transform: translateX(0);
+        }
+        > .mobile-menu__btn {
+            margin-left: auto;
+
         }
     }
 }
@@ -29,7 +39,15 @@
     padding: 0;
     border: none;
     background-color: transparent;
-    position: absolute;
+    border-radius: 50%;
+    margin-top: 10px;
+    // position: absolute;
+    cursor: pointer;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            &:hover {
+                background-color: $button-background;
+                transform: rotate(360deg);
+            }
     @media screen and (min-width:767px) {
         display: none;
     }

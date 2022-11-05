@@ -348,10 +348,20 @@ ul {
     z-index: 20;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
+    -webkit-transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), transform 700ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), transform 700ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mobile-menu .subscription__btn {
+    margin-top: 0;
   }
   .mobile-menu.is-open {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+  .mobile-menu > .mobile-menu__btn {
+    margin-left: auto;
   }
 }
 
@@ -363,7 +373,18 @@ ul {
   padding: 0;
   border: none;
   background-color: transparent;
-  position: absolute;
+  border-radius: 50%;
+  margin-top: 10px;
+  cursor: pointer;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu__btn:hover {
+  background-color: #2196f3;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 @media screen and (min-width: 767px) {
   .mobile-menu__btn {
@@ -474,7 +495,6 @@ ul {
 }
 @media screen and (max-width: 767px) {
   .contacts {
-    margin-top: 302px;
     margin-bottom: 64px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
