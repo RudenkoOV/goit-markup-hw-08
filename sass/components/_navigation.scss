@@ -1,8 +1,7 @@
 .navigation {
-  @media screen and (max-width: 767px) {
-    margin-top: 48px;
-    margin-bottom: 306px;
-  }
+  // @media screen and (max-width: 767px) {
+  //   // margin-top: 48px;
+  // }
   @media screen and (min-width: 768px) {
       margin-right: 96px;
     }
@@ -16,15 +15,16 @@
       flex-direction: column;
     }
   > li {
-      @media screen and (min-width: 768px) {
+    @media screen and (max-width: 767px) {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+        padding-bottom: 32px;
+      }
+    @media screen and (min-width: 768px) {
       margin-right: 50px;}
-      @media screen and (max-width: 767px) {
-      font-weight: 500;
-      font-size: 40px;
-      line-height: 1.18;
-      letter-spacing: 0.02em;
-      padding-bottom: 32px;
-    }
+      
     }
 }
 .navigation__list {
