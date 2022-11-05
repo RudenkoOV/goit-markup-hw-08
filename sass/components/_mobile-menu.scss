@@ -54,5 +54,7 @@
 .mobile-menu__btn--close {
         position: absolute;
         top: 10px;
-        right: 15px;
+        right: 25px;
+        @media screen and (min-width:480px) {
+        left: 436px;}
     }

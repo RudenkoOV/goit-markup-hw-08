@@ -2,7 +2,7 @@
     background-color: $header-background;
     border-bottom: 1px solid $border-header;
     @media screen and (min-width: 768px) {
-    padding-top: 21px;
+    padding-top: 26px;
     padding-bottom: 21px;
     }
     @media screen and (min-width: 1200px) {
@@ -13,6 +13,8 @@
         display: flex;
         align-items:baseline;
         justify-content: space-between;
-
+        @media screen and (max-width: 767px) {
+            align-items: center;
+        }
     }
-    }
+}

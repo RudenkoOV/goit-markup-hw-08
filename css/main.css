@@ -396,7 +396,12 @@ img {
 .mobile-menu__btn--close {
   position: absolute;
   top: 10px;
-  right: 15px;
+  right: 25px;
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__btn--close {
+    left: 436px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -477,8 +482,8 @@ img {
     position: absolute;
     bottom: 0;
     left: 0;
-    -webkit-transform: translateY(800%);
-            transform: translateY(800%);
+    -webkit-transform: translateY(1050%);
+            transform: translateY(1050%);
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -983,7 +988,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .header {
-    padding-top: 21px;
+    padding-top: 26px;
     padding-bottom: 21px;
   }
 }
@@ -1003,6 +1008,13 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .header .container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .hero {
