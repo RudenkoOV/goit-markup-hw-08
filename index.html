@@ -19,13 +19,23 @@
     <header class="header">
         <div class="container">
             <a class="logo logo--black" href="./index.html"><span class="logo__web">Web</span>Studio</a>
-            <!-- <button class="mobile-menu__btn is-open" type="button" data-menu-button aria-expanded="false">
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
                 <svg width="40" height="40" aria-label="Перемикач мобільного меню">
                     <use class="mobile-menu__icon-menu" href="./images/icons.svg#icon-menu-open"></use>
-                    <use class="mobile-menu__icon-cross" href="./images/icons.svg#icon-menu-close"></use>
                 </svg>
-            </button> -->
-            <div class="mobile-menu">
+            </button>
+            <div class="mobile-menu js-menu-container" id="mobile-menu">
+                <button class="mobile-menu__btn js-close-menu" aria-expanded="false" aria-controls="mobile-menu"
+                    type="button">
+                    <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+                        <!-- <use class="mobile-menu__icon-menu" href="./images/icons.svg#icon-menu-open"></use> -->
+                        <use class="mobile-menu__icon-cross" href="./images/icons.svg#icon-menu-close"></use>
+                    </svg>
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd">
+                    </path>
+                </button>
                 <nav class="navigation">
                     <ul class="navigation__list">
                         <li><a class="navigation__link navigation__link--curent" href="">Студія</a></li>
@@ -454,7 +464,10 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
 </body>
 
 </html>
