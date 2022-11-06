@@ -18,28 +18,52 @@
 <body class="body">
     <header class="header">
         <div class="container">
-            <nav class="navigation">
-                <a class="logo logo--black" href="./index.html"><span class="logo__web">Web</span>Studio</a>
-                <ul class="navigation__list">
-                    <li><a class="navigation__link" href="./index.html">Студія</a></li>
-                    <li><a class="navigation__link  navigation__link--curent" href="./portfolio.html">Портфоліо</a></li>
-                    <li><a class="navigation__link" href="">Контакти</a></li>
+            <a class="logo logo--black" href="./index.html"><span class="logo__web">Web</span>Studio</a>
+            <button class="mobile-menu__btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+                    <use class="mobile-menu__icon-menu" href="./images/icons.svg#icon-menu-open"></use>
+                </svg>
+            </button>
+            <div class="mobile-menu js-menu-container" id="mobile-menu">
+                <button class="mobile-menu__btn mobile-menu__btn--close js-close-menu" aria-expanded="false"
+                    aria-controls="mobile-menu" type="button">
+                    <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+                        <!-- <use class="mobile-menu__icon-menu" href="./images/icons.svg#icon-menu-open"></use> -->
+                        <use class="mobile-menu__icon-cross" href="./images/icons.svg#icon-menu-close"></use>
+                    </svg>
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd">
+                    </path>
+                </button>
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li><a class="navigation__link" href="./index.html">Студія</a></li>
+                        <li><a class="navigation__link navigation__link--curent" href="">Портфоліо</a></li>
+                        <li><a class="navigation__link" href="">Контакти</a></li>
+                    </ul>
+                </nav>
+                <ul class="contacts">
+                    <li>
+                        <a class="contacts__link" href="mailto:info@example.com"><svg class="contacts__svg" width="16"
+                                height="12">
+                                <use href="./images/icons.svg#icon-envelope"></use>
+                            </svg> info@devstudio.com</a>
+                    </li>
+                    <li>
+                        <a class="contacts__link" href="tel:+380961111111"><svg class="contacts__svg" width="16"
+                                height="12">
+                                <use href="./images/icons.svg#icon-smartphone"></use>
+                            </svg> +38 096 111 11 11</a>
+                    </li>
                 </ul>
-            </nav>
-            <ul class="contacts">
-                <li>
-                    <a class="contacts__link" href="mailto:info@example.com"><svg class="contacts__svg" width="16"
-                            height="12">
-                            <use href="./images/icons.svg#icon-envelope"></use>
-                        </svg> info@devstudio.com</a>
-                </li>
-                <li>
-                    <a class="contacts__link" href="tel:+380961111111"><svg class="contacts__svg" width="16"
-                            height="12">
-                            <use href="./images/icons.svg#icon-smartphone"></use>
-                        </svg> +38 096 111 11 11</a>
-                </li>
-            </ul>
+                <ul class="social-networks-mobile">
+                    <li class="social-networks-mobile__link"><a href="">Instagram</a></li>
+                    <li class="social-networks-mobile__link"><a href="">Twitter</a></li>
+                    <li class="social-networks-mobile__link"><a href="">Facebook</a></li>
+                    <li class="social-networks-mobile__link"><a href="">LinkedIn</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
@@ -56,7 +80,15 @@
                 <ul class="projects__list">
                     <li class="projects__item">
                         <div class="projects__card">
-                            <img src="./images/img3-0.jpg" alt="Технокряк" width="370">
+                            <picture>
+                                <source srcset="./images/img3-0.jpg 1x,
+                                                 ./images/img3@2x-0.jpg 2x" media="(min-width: 1200px)" />
+                                <source srcset="./images/img3-768-0.jpg 1x,
+                                                ./images/img3-768@2x-0.jpg 2x" media="(min-width: 768px)" />
+                                <source srcset="./images/img3-480-0.jpg 1x,
+                                                ./images/img3-480@2x-0.jpg 2x" />
+                                <img src="./images/img3-0.jpg" alt="Технокряк">
+                            </picture>
                             <p class="projects__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                 вичерпні відомості про компанію чи приватну особу.</p>
@@ -68,11 +100,18 @@
                     </li>
                     <li class="projects__item">
                         <div class="projects__card">
-                            <img src="./images/img3-1.jpg" alt="Постер New Orlean vs Golden Star" width="370">
-                            <p class="projects__text">Ресурс пропонує комплексні пропозиції з різним рівнем
-                                функціоналу та сервісів. Все це
-                                дозволить відвідувачу отримати
-                                вичерпні відомості про компанію чи приватну особу.</p>
+                            <picture>
+                                <source srcset="./images/img3-1.jpg 1x,
+                                                ./images/img3@2x-1.jpg 2x" media="(min-width: 1200px)" />
+                                <source srcset="./images/img3-768-1.jpg 1x,
+                                                ./images/img3-768@2x-1.jpg 2x" media="(min-width: 768px)" />
+                                <source srcset="./images/img3-480-1.jpg 1x,
+                                                ./images/img3-480@2x-1.jpg 2x" />
+                                <img src="./images/img3-1.jpg" alt="Постер New Orlean vs Golden Star">
+                                <p class="projects__text">Ресурс пропонує комплексні пропозиції з різним рівнем
+                                    функціоналу та сервісів. Все це
+                                    дозволить відвідувачу отримати
+                                    вичерпні відомості про компанію чи приватну особу.</p>
                         </div>
                         <div class="projects__filling">
                             <h3 class="projects__title">Постер New Orlean vs Golden Star</h3>
@@ -81,11 +120,18 @@
                     </li>
                     <li class="projects__item">
                         <div class="projects__card">
-                            <img src="./images/img3-2.jpg" alt="Ресторан Seafood" width="370">
-                            <p class="projects__text">Ресурс пропонує комплексні пропозиції з різним рівнем
-                                функціоналу та сервісів. Все це
-                                дозволить відвідувачу отримати
-                                вичерпні відомості про компанію чи приватну особу.</p>
+                            <picture>
+                                <source srcset="./images/img3-2.jpg 1x,
+                                                 ./images/img3@2x-2.jpg 2x" media="(min-width: 1200px)" />
+                                <source srcset="./images/img3-768-2.jpg 1x,
+                                                ./images/img3-768@2x-2.jpg 2x" media="(min-width: 768px)" />
+                                <source srcset="./images/img3-480-2.jpg 1x,
+                                                ./images/img3-480@2x-2.jpg 2x" />
+                                <img src="./images/img3-2.jpg" alt="Ресторан Seafood">
+                                <p class="projects__text">Ресурс пропонує комплексні пропозиції з різним рівнем
+                                    функціоналу та сервісів. Все це
+                                    дозволить відвідувачу отримати
+                                    вичерпні відомості про компанію чи приватну особу.</p>
                         </div>
                         <div class="projects__filling">
                             <h3 class="projects__title">Ресторан Seafood</h3>
@@ -94,7 +140,15 @@
                     </li>
                     <li class="projects__item">
                         <div class="projects__card">
-                            <img src="./images/img3-3.jpg" alt="Проєкт Prime" width="370">
+                            <picture>
+                                <source srcset="./images/img3-3.jpg 1x,
+                                                ./images/img3@2x-3.jpg 2x" media="(min-width: 1200px)" />
+                                <source srcset="./images/img3-768-3.jpg 1x,
+                                                ./images/img3-768@2x-3.jpg 2x" media="(min-width: 768px)" />
+                                <source srcset="./images/img3-480-3.jpg 1x,
+                                                ./images/img3-480@2x-3.jpg 2x" />
+                                <img src="./images/img3-3.jpg" alt="Проєкт Prime">
+                            </picture>
                             <p class="projects__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це
                                 дозволить відвідувачу отримати
@@ -107,7 +161,15 @@
                     </li>
                     <li class="projects__item">
                         <div class="projects__card">
-                            <img src="./images/img3-4.jpg" alt="Проєкт Boxes" width="370">
+                            <picture>
+                                <source srcset="./images/img3-4.jpg 1x,
+                                                 ./images/img3@2x-4.jpg 2x" media="(min-width: 1200px)" />
+                                <source srcset="./images/img3-768-4.jpg 1x,
+                                                ./images/img3-768@2x-4.jpg 2x" media="(min-width: 768px)" />
+                                <source srcset="./images/img3-480-4.jpg 1x,
+                                                ./images/img3-480@2x-4.jpg 2x" />
+                                <img src="./images/img3-4.jpg" alt="Проєкт Boxes">
+                            </picture>
                             <p class="projects__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це
                                 дозволить відвідувачу отримати
@@ -120,7 +182,15 @@
                     </li>
                     <li class="projects__item">
                         <div class="projects__card">
-                            <img src="./images/img3-5.jpg" alt="Веб-сайт Inspiration has no Borders" width="370">
+                            <picture>
+                                <source srcset="./images/img3-5.jpg 1x,
+                                                 ./images/img3@2x-5.jpg 2x" media="(min-width: 1200px)" />
+                                <source srcset="./images/img3-768-5.jpg 1x,
+                                                ./images/img3-768@2x-5.jpg 2x" media="(min-width: 768px)" />
+                                <source srcset="./images/img3-480-5.jpg 1x,
+                                                ./images/img3-480@2x-0.jpg 2x" />
+                                <img src="./images/img3-5.jpg" alt="Веб-сайт Inspiration has no Borders">
+                            </picture>
                             <p class="projects__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це
                                 дозволить відвідувачу отримати
@@ -133,7 +203,15 @@
                     </li>
                     <li class="projects__item">
                         <div class="projects__card">
-                            <img src="./images/img3-6.jpg" alt="Видання Limited Edition" width="370">
+                            <picture>
+                                <source srcset="./images/img3-6.jpg 1x,
+                                                 ./images/img3@2x-6.jpg 2x" media="(min-width: 1200px)" />
+                                <source srcset="./images/img3-768-6.jpg 1x,
+                                                ./images/img3-768@2x-6.jpg 2x" media="(min-width: 768px)" />
+                                <source srcset="./images/img3-480-6.jpg 1x,
+                                                ./images/img3-480@2x-6.jpg 2x" />
+                                <img src="./images/img3-6.jpg" alt="Видання Limited Edition">
+                            </picture>
                             <p class="projects__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це
                                 дозволить відвідувачу отримати
@@ -146,7 +224,15 @@
                     </li>
                     <li class="projects__item">
                         <div class="projects__card">
-                            <img src="./images/img3-7.jpg" alt="Проєкт LAB" width="370">
+                            <picture>
+                                <source srcset="./images/img3-7.jpg 1x,
+                                                 ./images/img3@2x-7.jpg 2x" media="(min-width: 1200px)" />
+                                <source srcset="./images/img3-768-7.jpg 1x,
+                                                ./images/img3-768@2x-7.jpg 2x" media="(min-width: 768px)" />
+                                <source srcset="./images/img3-480-7.jpg 1x,
+                                                ./images/img3-480@2x-7.jpg 2x" />
+                                <img src="./images/img3-7.jpg" alt="Проєкт LAB">
+                            </picture>
                             <p class="projects__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це
                                 дозволить відвідувачу отримати
@@ -159,7 +245,15 @@
                     </li>
                     <li class="projects__item">
                         <div class="projects__card">
-                            <img src="./images/img3-8.jpg" alt="Growing Business" width="370">
+                            <picture>
+                                <source srcset="./images/img3-8.jpg 1x,
+                                                 ./images/img3@2x-8.jpg 2x" media="(min-width: 1200px)" />
+                                <source srcset="./images/img3-768-8.jpg 1x,
+                                                ./images/img3-768@2x-8.jpg 2x" media="(min-width: 768px)" />
+                                <source srcset="./images/img3-480-8.jpg 1x,
+                                                ./images/img3-480@2x-8.jpg 2x" />
+                                <img src="./images/img3-8.jpg" alt="Growing Business">
+                            </picture>
                             <p class="projects__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це
                                 дозволить відвідувачу отримати
@@ -176,18 +270,16 @@
     </main>
     <footer class="foot">
         <div class="container footer">
-            <div>
+            <address class="adress">
                 <a class="logo logo--white" href="./index.html"><span class="logo__web">Web</span>Studio</a>
-                <address class="adress">
-                    <ul>
-                        <li><a class="adress__map"
-                                href="https://www.google.com.ua/maps/place/Mis%CA%B9ka+Stantsiya+Perelyvannya+Krovi/@50.4380181,30.5252635,19.65z/data=!4m5!3m4!1s0x40d4cfabbdd3cb4f:0x104631ce8d70f54c!8m2!3d50.437984!4d30.525297?hl=ru"
-                                target="_blank" rel="noopener noreferrer"> г. Киев, пр-т Леси Украинки, 26</a></li>
-                        <li><a class="adress__link" href="mailto:info@example.com">info@example.com</a></li>
-                        <li><a class="adress__link" href="tel:+380961111111">+38 096 111 11 11</a></li>
-                    </ul>
-                </address>
-            </div>
+                <ul>
+                    <li><a class="adress__map"
+                            href="https://www.google.com.ua/maps/place/Mis%CA%B9ka+Stantsiya+Perelyvannya+Krovi/@50.4380181,30.5252635,19.65z/data=!4m5!3m4!1s0x40d4cfabbdd3cb4f:0x104631ce8d70f54c!8m2!3d50.437984!4d30.525297?hl=ru"
+                            target="_blank" rel="noopener noreferrer"> г. Киев, пр-т Леси Украинки, 26</a></li>
+                    <li><a class="adress__link" href="mailto:info@example.com">info@example.com</a></li>
+                    <li><a class="adress__link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                </ul>
+            </address>
             <div class="soc-network">
                 <p class="soc-network__text">Приєднуйтесь</p>
                 <ul class="soc-network__list">
@@ -229,6 +321,61 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" data-modal-close class="modal__close-btn">
+                <svg width="18" height="18">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <form class="modal__form" autocomplete="off">
+                <p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
+                <label class="modal__label">
+                    <span class="modal__name">Ім'я</span>
+                    <input class="modal__input" type="text" name="name" placeholder=" ">
+                    <svg class="modal__svg" width="18" height="18">
+                        <use href="./images/icons.svg#icon-person"></use>
+                    </svg>
+                </label>
+                <label class="modal__label">
+                    <span class="modal__name">Телефон</span>
+                    <input class="modal__input" type="tel" name="phone" placeholder=" ">
+                    <svg class="modal__svg" width="18" height="18">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                </label>
+                <label class="modal__label">
+                    <span class="modal__name">Пошта</span>
+                    <input class="modal__input" type="email" name="mail" placeholder=" ">
+                    <svg class="modal__svg" width="18" height="18">
+                        <use href="./images/icons.svg#icon-email"></use>
+                    </svg>
+                </label>
+                <label class="modal__label">
+                    <span class="modal__name">Коментар</span>
+                    <textarea class="modal__text-area" rows="5" width="448" height="120"
+                        placeholder="Введіть текст"></textarea>
+                </label>
+                <label class="checkbox">
+                    <input class="checkbox__agreement" type="checkbox">
+                    <svg class="checkbox__agreement-disable" width="16" height="15">
+                        <use href="./images/icons.svg#icon-nocheck"></use>
+                    </svg>
+                    <span class="checkbox__agreement-enable"></span>
+                    <p>Погоджуюся з розсилкою та приймаю</p>
+                    <a href="">Умови договору</a>
+                </label>
+                <button class="subscription__btn modal__btn" type="submit">
+                    <p>Відправити</p>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
 </body>
 
 </html>

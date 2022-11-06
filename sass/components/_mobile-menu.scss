@@ -42,9 +42,12 @@
     // margin-right: 15px;
     // position: absolute;
     cursor: pointer;
+    > svg {
+        fill: currentColor;
+    }
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            &:hover {
-                background-color: $button-background;
+            &:hover, &:focus {
+                color: $button-background;
                 transform: rotate(360deg);
             }
     @media screen and (min-width:767px) {

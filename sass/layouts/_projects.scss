@@ -1,7 +1,11 @@
 .projects {
     display: flex;
-    gap: 8px;
-    justify-content: center;
+    gap: 15px 8px;
+    justify-content: left;
+    flex-wrap: wrap;
+    @media screen and (min-width:768px) {
+        justify-content:center;
+    }
 }
 
 .projects__btn {
@@ -32,13 +36,25 @@
 .projects__list {
     display: inline-flex;
     gap: 30px;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 40px;
+    @media screen and (min-width:768px) {
+        margin-top: 30px;
+    }
+    @media screen and (min-width:1200px) {
+        margin-top: 50px;
+    }
+
     > li {
+        border: 1px solid $proect-card-border;
+        cursor: pointer;
+        @media screen and (min-width:768px) {
+            width: calc((100% - 30px) / 2);
+            }
+        @media screen and (min-width:1200px) {
             width: calc((100% - 60px) / 3);
-            border: 1px solid $proect-card-border;
-            cursor: pointer;
+            }
         }
 }
 
