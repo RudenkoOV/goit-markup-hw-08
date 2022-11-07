@@ -1,0 +1,70 @@
+.checkbox {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-bottom: 30px;
+        font-size: 12px;
+            line-height: 1.12;
+    p {
+    
+        color: $work-list-item-txt;
+        }
+    a {
+            color: $button-background;
+        }
+}
+
+.checkbox__agreement {
+    appearance: none;
+    position: absolute;
+    }
+
+.checkbox__agreement-enable {
+    width: 16px;
+    height: 15px;
+    background-image: url('../images/icon-check.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .checkbox__agreement:not(:checked) ~& {
+    appearance: none;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        margin: -1px;
+    }
+}
+
+.checkbox__agreement-disable {
+    appearance: none;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+    .checkbox__agreement:not(:checked) ~& {
+        appearance: auto;
+            position: static;
+            white-space: normal;
+            width: 16px;
+            height: 15px;
+            overflow: visible;
+            clip: auto;
+            clip-path: none;
+            margin: 0;
+        }
+}

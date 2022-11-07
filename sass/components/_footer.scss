@@ -1,0 +1,39 @@
+.foot {
+    background: $footer-background;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer {
+    >a {
+        display: block;
+        }
+    .logo {
+        text-align: center;
+        @media screen and (min-width:1200px) {
+            text-align: left;
+        }
+    }
+    @media screen and (min-width:1200px) {
+        display: flex;
+        align-items: baseline;
+        justify-content:space-between;
+    }
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    .subscription {
+        width: 100%;
+            &__input {
+            width: 450px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        }
+    }   
+
+}

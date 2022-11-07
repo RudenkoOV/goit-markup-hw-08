@@ -1,0 +1,50 @@
+.client {
+padding-bottom: 60px;
+padding-top: 60px;
+@media screen and (min-width:1200px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+    }
+}
+
+.client__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width:1200px) {
+    flex-wrap: nowrap;
+    }
+}
+
+.client__link {
+    border: 1px solid $client-svg;
+    color: $client-svg;
+    border-radius: 4px;
+    width: 210px;
+    height: 92px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+            border-color: $button-background;
+            color: $button-background;
+        }
+    @media screen and (min-width:1200px) {
+        width: 170px;
+    }
+}
+.client__svg {
+    fill: currentColor;
+}
+.client__title {
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    color: $occup-team-logo;
+    margin-bottom: 30px;
+}
