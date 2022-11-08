@@ -34,7 +34,7 @@
                         url('../images/img-main.jpg');
             @include retina {
                         background-image: linear-gradient($gradient-hero, $gradient-hero),
-                                url('../images/img-main-1200@2x.jpg');
+                                url('.././images/img-main@2x.jpg');
                     }
     }
 
